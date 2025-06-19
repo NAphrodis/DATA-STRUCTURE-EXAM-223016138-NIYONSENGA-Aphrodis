@@ -1,10 +1,22 @@
                       Employee Compensation System
+
                           INTRODUCTION
-Employee Compensation System is a C++ console program developed based on the Object-Oriented Programming (OOP) principles. This system is designed to help manage various pay components of employees, such as base salary, allowances, and bonuses. By incorporating features like dynamic memory allocation, abstraction, and polymorphism, the system provides a flexible way to compute total salary, calculate commission-based incentives and view total compensation. Its interactive menu-driven interface allows users to perform operations like adding, removing, and displaying pay components in real time. This project serves as a practical demonstration of how core OOP concepts can be applied to solve real-world payroll management problems. Thus this document will demonstrate assigned task, explains how it was completed and includes annotated code with comments detailing the purpose of each line of the Employee Compensation system.
+
+Employee Compensation System is a C++ console program developed based on the Object-Oriented Programming (OOP) principles.
+This system is designed to help manage various pay components of employees, such as base salary, allowances, and bonuses. 
+By incorporating features like dynamic memory allocation, abstraction, and polymorphism, the system provides a flexible way
+to compute total salary, calculate commission-based incentives and view total compensation. Its interactive menu-driven interface
+allows users to perform operations like adding, removing, and displaying pay components in real time. 
+This project serves as a practical demonstration of how core OOP concepts can be applied to solve real-world payroll management problems.
+Thus this document will demonstrate assigned task, explains how it was completed and includes annotated code with comments detailing the
+purpose of each line of the Employee Compensation system.
+
 1. Assigned Task
-The objective of this project is to design and implement an Employee Compensation System using Object-Oriented Programming principles in C++. The goal is to simulate a compensation model that allows management of various employee pay components in a modular and dynamic way.
+
+The objective of this project is to design and implement an Employee Compensation System using Object-Oriented Programming principles in C++.
+The goal is to simulate a compensation model that allows management of various employee pay components in a modular and dynamic way.
 Functional Requirements:
-The system must provide the following features:
+The system have provided the following features:
 1. Add Pay Component: Allow users to add salary components (e.g: base salary, transport allowance, housing allowance).
 2. Remove Pay Component: Enable removal of components by their index position.
 3. Display Components: View all the added pay components with their descriptions and monetary amounts.
@@ -12,19 +24,23 @@ The system must provide the following features:
 5. Compute Commission: Calculate a 10% commission based on each pay component.
 6. Compute Total Compensation: Display the combined value of salary and commission.
 7. Exit: Terminate the program.
-Learning Objective:
+
 The task demonstrates mastery of key OOP concepts including:
 * Abstraction: via an abstract base class that defines a general calculator interface.
 * Polymorphism: through inheritance and use of virtual functions for different compensation calculators.
 * Dynamic Memory Handling: using pointers to dynamically manage pay component arrays.
 * Modular Design: separating logic for input, display, calculation, and data management.
 * Pointer Arithmetic: Accessing pay components using pointers instead of indexing to demonstrate low-level control.
+
 2. How Tasks It Was Completed
+
 The Employee Compensation System was developed using C++, applying Object-Oriented Programming principles to ensure modularity, flexibility, and clarity in design. The main building block of the program is a PayComponent structure which holds two key pieces of information for each salary entry, a character array for the description and a floating-point number representing the monetary value of that component. These components are stored in a dynamic array to allow flexible addition and removal at runtime.
 At the heart of the system is an abstract class named CompCalculator, which defines a pure virtual function compute(). This function establishes a common interface for all types of compensation calculations. Two concrete classes inherit from this base: SalaryCalculator, which computes the total salary by summing all component amounts, and CommissionCalculator, which calculates a 10% commission on each component. These classes demonstrate abstraction and polymorphism by allowing the same compute() method to behave differently depending on the calculator used.
 To manage user input and interaction, the program includes a menu-driven loop implemented in the main() function. Users can continuously perform actions such as adding new components, removing existing ones by index, displaying all entries, and performing various calculations. Each operation is encapsulated in its own function for clarity and reusability. For example, the addComponent() function expands the dynamic array to include a new component, while removeComponent() shrinks the array after deleting a specific item. The dynamic memory is carefully handled using new and delete[] to avoid memory leaks.
 Throughout the system, key OOP concepts are applied to enhance design quality. Abstraction ensures calculators have a unified interface, polymorphism enables interchangeable use of different calculator types, and modularity keeps logic well-separated and reusable. This design approach not only fulfills the functional requirements but also makes the codebase scalable and easier to maintain or enhance in the future.
- 3. Annotated Code with comments
+ 
+3. Annotated Code with comments
+
 #include <iostream>         //Includes the standard input/output stream library. Needed       to use cout, cin, etc.
 #include <cstring>          // Includes string handling (for char arrays)
 using namespace std;        // Enables use of standard names (cout, cin)    without prefixing 'std::'
