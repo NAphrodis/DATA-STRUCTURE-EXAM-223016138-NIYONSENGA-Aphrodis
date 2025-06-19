@@ -1,6 +1,6 @@
                       Employee Compensation System
                           INTRODUCTION
-Employee Compensation System is a C++ console program developed based on the Object-Oriented Programming (OOP) principles. This system is designed to help manage various pay components of employees, such as base salary, allowances, and bonuses. By incorporating features like dynamic memory allocation, abstraction, and polymorphism, the system provides a flexible way to compute total salary, calculate commission-based incentives and view total compensation. Its interactive menu-driven interface allows users to perform operations like adding, removing, and displaying pay components in real time. This project serves as a practical demonstration of how core OOP concepts can be applied to solve real-world payroll management problems. Thus this document will demonstrate assigned task, explains how it was completed and includes annotated code with comments detailing the purpose of each line of the Employee Compensation system.
+Employee Compensation System is aÂ C++Â consoleÂ programÂ developedÂ basedÂ onÂ theÂ Object-Oriented Programming (OOP) principles. This system is designed to help manage various pay components of employees, such as base salary, allowances, and bonuses. By incorporating features like dynamic memory allocation, abstraction, and polymorphism, the system provides a flexible way to compute total salary, calculate commission-based incentives and view total compensation. Its interactive menu-driven interface allows users to perform operations like adding, removing, and displaying pay components in real time. This project serves as a practical demonstration of how core OOP concepts can be applied to solve real-world payroll management problems. Thus this document will demonstrate assigned task, explains how it was completed and includes annotated code with comments detailing the purpose of each line of the Employee Compensation system.
 1. Assigned Task
 The objective of this project is to design and implement an Employee Compensation System using Object-Oriented Programming principles in C++. The goal is to simulate a compensation model that allows management of various employee pay components in a modular and dynamic way.
 Functional Requirements:
@@ -12,7 +12,7 @@ The system must provide the following features:
 5. Compute Commission: Calculate a 10% commission based on each pay component.
 6. Compute Total Compensation: Display the combined value of salary and commission.
 7. Exit: Terminate the program.
-Learning Objective:
+
 The task demonstrates mastery of key OOP concepts including:
 * Abstraction: via an abstract base class that defines a general calculator interface.
 * Polymorphism: through inheritance and use of virtual functions for different compensation calculators.
